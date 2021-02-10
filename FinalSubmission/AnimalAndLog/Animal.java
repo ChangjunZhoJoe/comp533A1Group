@@ -1,27 +1,35 @@
 package AnimalAndLog;
 
 public class Animal {
-	private String aName;
 	private String aSound;
+	private String aName;
+
 	@Log
-	public Animal(String pname, String pSound) {
-		aName = pname;
-		aSound = pSound;
+	public Animal(String name, String sound) {
+		aName = name;
+		aSound = sound;
 	}
+
 	@Log
-	public String hearSound(int times) {
-		return aSound;
+	public void displayName(String name) {
+		aName = aName + name;
 	}
-	
-    public String toString() {
-        return aName;
-    }
+
+	@Log
+	public void hearSound(int times) {
+		 aSound = aSound + times;
+	}
+
+  public String toString() {
+		return aName;
+	}
 
 	public static void main(String[] args) {
-		Animal bird = new Animal("bird","bibibi");
-		Animal cow = new Animal("cow","mumumu");
-		
-		bird.hearSound(2);
+		Animal cow = new Animal("Cow","mumumu");
+		Owner simon = new Owner("Simon");
+
 		cow.hearSound(1);
+		cow.displayName("aaa");
+		simon.greet("hello");
 	}
 }

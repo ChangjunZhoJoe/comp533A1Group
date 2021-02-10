@@ -24,7 +24,7 @@ public aspect Logger {
         for (Object arg : args) {
         	parameter += arg.toString() + " ";
         }
-        System.out.println(methodName + " called on Object: " + object + " with parameter " + parameter);
+        System.out.println(methodName + " called on object " + object + " with parameter " + parameter);
     }
 
 }
