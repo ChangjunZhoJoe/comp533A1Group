@@ -4,7 +4,7 @@ package AnimalAndLog;
 @interface Log{}
 //created and interface to make Log reusable
 
-public aspect Loggable {
+public aspect Logger {
 
     public static void log(String message) {
         System.out.println(message);
