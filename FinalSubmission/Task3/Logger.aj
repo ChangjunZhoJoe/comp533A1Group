@@ -11,7 +11,7 @@ public aspect Logger {
 
     //Log when object is created
     after() returning (Object object): call(*.new(..)) && !within(Logger) && @annotation(Log) {
-        String stringToLog = ("Task 3 Created object " + object);
+        String stringToLog = ("Created object " + object);
         Logger.log(stringToLog);
     }
 
@@ -24,7 +24,7 @@ public aspect Logger {
         for (Object arg : args) {
         	parameter += arg.toString() + " ";
         }
-        System.out.println("Task 3 "+ methodName + " called on Object: " + object + " with parameter " + parameter);
+        System.out.println(methodName + " called on Object: " + object + " with parameter " + parameter);
     }
 
 }

@@ -11,7 +11,7 @@ public aspect Logger {
     }
 
     //Log when object is created
-    after() returning (Object object): call(*.new(..)) && !within(Loggable) && @annotation(Log) {
+    after() returning (Object object): call(*.new(..)) && !within(Logger) && @annotation(Log) {
         String stringToLog = ("Created object " + object);
         Logger.log(stringToLog);
     }
