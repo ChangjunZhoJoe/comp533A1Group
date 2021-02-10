@@ -9,6 +9,6 @@ We tested and ran out code in MacOs:
 Here are the steps to run our codes from command line. Make sure you are in FinalSubmission folder.
 
 
-Task3:
-1. ajc -1.5 Task3/*.java Task3/*.aj
-2. java Task3.BankWithLogging
+Task4:
+1. ajc -1.5 AnimalAndLog/*.java AnimalAndLog/*.aj
+2. java AnimalAndLog.Animal
